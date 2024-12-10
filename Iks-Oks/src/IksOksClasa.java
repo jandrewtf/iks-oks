@@ -3,8 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class IksOksClasa {
-
-	int boardWidth = 600;
+    int boardWidth = 600;
     int boardHeight = 650;
 
     JFrame frame = new JFrame("Tic-Tac-Toe");
@@ -53,7 +52,6 @@ public class IksOksClasa {
                 tile.setForeground(Color.white);
                 tile.setFont(new Font("Arial", Font.BOLD, 120));
                 tile.setFocusable(false);
-//                 tile.setText(currentPlayer);
 
                 tile.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
@@ -76,7 +74,6 @@ public class IksOksClasa {
     }
     
     void checkWinner() {
-        //horizontal
         for (int r = 0; r < 3; r++) {
             if (board[r][0].getText() == "") continue;
 
@@ -113,7 +110,6 @@ public class IksOksClasa {
             return;
         }
 
-        //anti-diagonally
         if (board[0][2].getText() == board[1][1].getText() &&
             board[1][1].getText() == board[2][0].getText() &&
             board[0][2].getText() != "") {
